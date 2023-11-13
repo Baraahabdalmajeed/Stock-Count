@@ -1,0 +1,5 @@
+/* تحديد لون الصفوف المضافة في جدول Stock Count Conflict */
+.stock-count-conflict-row {
+    background-color: #ffcccb; /* يمكنك تغيير اللون حسب الرغبة */
+    /* أي تنسيق إضافي يمكنك إضافته هنا */
+}

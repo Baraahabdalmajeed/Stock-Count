@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-28 11:54:37.355363",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deparment_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "deparment_name",
+   "fieldtype": "Link",
+   "label": "Dapartment Name",
+   "options": "Department"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-28 11:54:55.244604",
+ "modified_by": "Administrator",
+ "module": "Stock Count",
+ "name": "Count Department",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{parent_stock_count} - item {item_code} - {#####}",
+ "creation": "2023-08-28 08:38:27.389129",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parent_stock_count",
+  "item_code",
+  "quantity",
+  "type",
+  "column_break_qjmvb",
+  "item_site",
+  "site",
+  "stage",
+  "is_corrective",
+  "after_closed",
+  "column_break_wxazf",
+  "counter_name",
+  "device_mac",
+  "resolver",
+  "conflict_check",
+  "section_break_4gjtp",
+  "scan_date_time",
+  "sync_date_time",
+  "column_break_0oufr",
+  "server_date_time",
+  "conf_res_date_time",
+  "jobs_section",
+  "job_id",
+  "column_break_rsvak",
+  "device_transaction_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "parent_stock_count",
+   "fieldtype": "Link",
+   "label": "Parent Stock Count",
+   "options": "Stock Count"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "item_site",
+   "fieldtype": "Link",
+   "label": "Item Site",
+   "options": "DocType"
+  },
+  {
+   "depends_on": "eval:doc.item_site != null",
+   "fieldname": "site",
+   "fieldtype": "Dynamic Link",
+   "label": "Site",
+   "options": "item_site"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Count\nReceiving\nIssuing"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_corrective",
+   "fieldtype": "Check",
+   "label": "Is Corrective"
+  },
+  {
+   "fieldname": "counter_name",
+   "fieldtype": "Link",
+   "label": "Counter Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "scan_date_time",
+   "fieldtype": "Datetime",
+   "label": "Scan Date & Time"
+  },
+  {
+   "fieldname": "sync_date_time",
+   "fieldtype": "Datetime",
+   "label": "Sync Date & Time"
+  },
+  {
+   "fieldname": "server_date_time",
+   "fieldtype": "Datetime",
+   "label": "Server Date & Time"
+  },
+  {
+   "fieldname": "section_break_4gjtp",
+   "fieldtype": "Section Break",
+   "label": "Timings"
+  },
+  {
+   "fieldname": "column_break_0oufr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qjmvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "\nBefore\nAfter"
+  },
+  {
+   "default": "0",
+   "fieldname": "conflict_check",
+   "fieldtype": "Check",
+   "label": "Conflict Check"
+  },
+  {
+   "fieldname": "conf_res_date_time",
+   "fieldtype": "Datetime",
+   "label": "Conflict resolve Date & Time"
+  },
+  {
+   "fieldname": "resolver",
+   "fieldtype": "Link",
+   "label": "Resolver ",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_wxazf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "device_mac",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Device Mac"
+  },
+  {
+   "default": "0",
+   "fieldname": "after_closed",
+   "fieldtype": "Check",
+   "label": "After Closed"
+  },
+  {
+   "fieldname": "job_id",
+   "fieldtype": "Data",
+   "label": "Job Id"
+  },
+  {
+   "fieldname": "device_transaction_id",
+   "fieldtype": "Data",
+   "label": "Device Transaction Id"
+  },
+  {
+   "fieldname": "jobs_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rsvak",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-16 12:20:13.491557",
+ "modified_by": "Administrator",
+ "module": "Stock Count",
+ "name": "Stock Count Transaction",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Count Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Count Counter",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

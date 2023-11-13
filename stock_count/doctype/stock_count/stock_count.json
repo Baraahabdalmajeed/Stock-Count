@@ -1,0 +1,322 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{class}-{type}-{####}",
+ "creation": "2023-08-28 07:46:35.917429",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class",
+  "type",
+  "col",
+  "description",
+  "manual_site_check",
+  "manual_item_check",
+  "location_section",
+  "location_check",
+  "locations",
+  "department_section",
+  "department_check",
+  "departments",
+  "asset_section",
+  "asset_check",
+  "assets_list",
+  "warehouse_section",
+  "warehouse_check",
+  "material_warehouse",
+  "material_section",
+  "material_check",
+  "items",
+  "administrator_info_tab",
+  "section_break_fd6lb",
+  "start_date",
+  "progress",
+  "col10",
+  "end_date",
+  "has_inserted_after_close",
+  "counters_section",
+  "counters_list",
+  "stock_count_transaction_child_tab",
+  "stock_count_transaction_child",
+  "count_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Counting Class",
+   "options": "Count Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Material\nAsset",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "length": 400,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Asset'",
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location Section"
+  },
+  {
+   "default": "0",
+   "fieldname": "location_check",
+   "fieldtype": "Check",
+   "label": "Get All"
+  },
+  {
+   "fieldname": "locations",
+   "fieldtype": "Table",
+   "label": "Assets Locations",
+   "options": "Count Location"
+  },
+  {
+   "fieldname": "department_section",
+   "fieldtype": "Section Break",
+   "label": "Department Section"
+  },
+  {
+   "default": "0",
+   "fieldname": "department_check",
+   "fieldtype": "Check",
+   "label": "Get All"
+  },
+  {
+   "fieldname": "departments",
+   "fieldtype": "Table",
+   "label": "Departments",
+   "options": "Count Department"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Asset'",
+   "fieldname": "asset_section",
+   "fieldtype": "Section Break",
+   "label": "Assets Section"
+  },
+  {
+   "default": "0",
+   "fieldname": "asset_check",
+   "fieldtype": "Check",
+   "label": "Get All"
+  },
+  {
+   "fieldname": "assets_list",
+   "fieldtype": "Table",
+   "label": "Assets List ",
+   "options": "Count Asset"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Material'",
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "Warehouse Section "
+  },
+  {
+   "default": "0",
+   "fieldname": "warehouse_check",
+   "fieldtype": "Check",
+   "label": "Get All "
+  },
+  {
+   "fieldname": "material_warehouse",
+   "fieldtype": "Table",
+   "label": "Material Warehouses",
+   "options": "Count Warehouse"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Material'",
+   "fieldname": "material_section",
+   "fieldtype": "Section Break",
+   "label": "Material Section"
+  },
+  {
+   "default": "0",
+   "fieldname": "material_check",
+   "fieldtype": "Check",
+   "label": "Get All"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Count Material"
+  },
+  {
+   "fieldname": "administrator_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Administration Info"
+  },
+  {
+   "fieldname": "section_break_fd6lb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "col10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "counters_section",
+   "fieldtype": "Section Break",
+   "label": "Counters Section"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "counters_list",
+   "fieldtype": "Table",
+   "label": "Counters List",
+   "options": "Count Counters"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Stock Count",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Stock Count",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_count_transaction_child_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stock Count Transaction Child"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "stock_count_transaction_child",
+   "fieldtype": "Table",
+   "label": "Stock Count Transaction Child",
+   "options": "Stock Count Transaction Child"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "count_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Count Status",
+   "options": "Draft\nApproved\nClosed\nCancelled"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "has_inserted_after_close",
+   "fieldtype": "Check",
+   "label": "Has Entries After Close"
+  },
+  {
+   "default": "0",
+   "fieldname": "manual_item_check",
+   "fieldtype": "Check",
+   "label": "Allow Manual Item Entry"
+  },
+  {
+   "default": "0",
+   "fieldname": "manual_site_check",
+   "fieldtype": "Check",
+   "label": "Allow Manual Site Entry"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "progress",
+   "fieldtype": "Data",
+   "label": "Progress Percentages"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-18 05:55:51.351733",
+ "modified_by": "Administrator",
+ "module": "Stock Count",
+ "name": "Stock Count",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Count Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Count Counter",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Closed"
+  }
+ ]
+}

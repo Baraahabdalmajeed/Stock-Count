@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{parent_stock_count} - item {item_code} - {#####}",
+ "creation": "2023-08-30 08:56:38.094654",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "quantity",
+  "type",
+  "column_break_qr0ae",
+  "item_site",
+  "site",
+  "stage",
+  "reference",
+  "is_corrective",
+  "after_closed",
+  "column_break_qjmvb",
+  "counter_name",
+  "device_mac",
+  "resolver",
+  "conflict_check",
+  "section_break_4gjtp",
+  "scan_date_time",
+  "sync_date_time",
+  "column_break_0oufr",
+  "server_date_time",
+  "conf_res_date_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Count\nReceiving\nIssuing"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "\nBefore\nAfter"
+  },
+  {
+   "fieldname": "column_break_qjmvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_site",
+   "fieldtype": "Link",
+   "label": "Item Site",
+   "options": "DocType"
+  },
+  {
+   "depends_on": "eval:doc.item_site != null",
+   "fieldname": "site",
+   "fieldtype": "Dynamic Link",
+   "label": "Site",
+   "options": "item_site"
+  },
+  {
+   "fieldname": "counter_name",
+   "fieldtype": "Link",
+   "label": "Counter Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "resolver",
+   "fieldtype": "Link",
+   "label": "Resolver ",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_corrective",
+   "fieldtype": "Check",
+   "label": "Is Corrective"
+  },
+  {
+   "default": "0",
+   "fieldname": "conflict_check",
+   "fieldtype": "Check",
+   "label": "Conflict Check"
+  },
+  {
+   "fieldname": "section_break_4gjtp",
+   "fieldtype": "Section Break",
+   "label": "Timings"
+  },
+  {
+   "fieldname": "scan_date_time",
+   "fieldtype": "Datetime",
+   "label": "Scan Date & Time"
+  },
+  {
+   "fieldname": "sync_date_time",
+   "fieldtype": "Datetime",
+   "label": "Sync Date & Time"
+  },
+  {
+   "fieldname": "column_break_0oufr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "server_date_time",
+   "fieldtype": "Datetime",
+   "label": "Server Date & Time"
+  },
+  {
+   "fieldname": "conf_res_date_time",
+   "fieldtype": "Datetime",
+   "label": "Conflict resolve Date & Time"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Link",
+   "label": "Reference",
+   "options": "Stock Count Transaction"
+  },
+  {
+   "fieldname": "column_break_qr0ae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "after_closed",
+   "fieldtype": "Check",
+   "label": "After Closed"
+  },
+  {
+   "fieldname": "device_mac",
+   "fieldtype": "Data",
+   "label": "Device Mac"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 09:30:16.505277",
+ "modified_by": "Administrator",
+ "module": "Stock Count",
+ "name": "Stock Count Transaction Child",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

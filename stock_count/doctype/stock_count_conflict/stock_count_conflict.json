@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{parent_stock_count} Conflicts",
+ "creation": "2023-08-30 06:51:29.071654",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parent_stock_count",
+  "stock_count_transaction_child",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "parent_stock_count",
+   "fieldtype": "Link",
+   "label": "Parent Stock Count",
+   "options": "Stock Count",
+   "unique": 1
+  },
+  {
+   "fieldname": "stock_count_transaction_child",
+   "fieldtype": "Table",
+   "label": "Stock Count Transaction Child",
+   "options": "Stock Count Transaction Child"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Stock Count Conflict",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-10 11:05:10.356072",
+ "modified_by": "Administrator",
+ "module": "Stock Count",
+ "name": "Stock Count Conflict",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Count Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Stock Count Counter",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

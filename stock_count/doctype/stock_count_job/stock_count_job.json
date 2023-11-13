@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-05 06:07:22.935394",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_info_section",
+  "job_id",
+  "job_name",
+  "count_of_total_records",
+  "queue",
+  "status",
+  "column_break_5",
+  "arguments",
+  "exception_section",
+  "exc_info"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_info_section",
+   "fieldtype": "Section Break",
+   "label": "Job Info"
+  },
+  {
+   "fieldname": "job_id",
+   "fieldtype": "Data",
+   "label": "Job ID"
+  },
+  {
+   "fieldname": "job_name",
+   "fieldtype": "Data",
+   "label": "Job Name"
+  },
+  {
+   "fieldname": "queue",
+   "fieldtype": "Select",
+   "label": "Queue",
+   "options": "default\nshort\nlong"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "arguments",
+   "fieldtype": "Code",
+   "label": "Arguments"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "queued\nstarted\nfinished\nfailed\ndeferred\nscheduled\ncanceled"
+  },
+  {
+   "fieldname": "exception_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "exc_info",
+   "fieldtype": "Code",
+   "label": "Exception"
+  },
+  {
+   "fieldname": "count_of_total_records",
+   "fieldtype": "Int",
+   "label": "Count Of Total Records"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-11 08:08:36.013683",
+ "modified_by": "Administrator",
+ "module": "Stock Count",
+ "name": "Stock Count Job",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Count Counter",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Count Manager",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-28 11:56:48.074511",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "asset_class",
+  "asset_location",
+  "asset_desc",
+  "item_name",
+  "barcode"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Asset Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "asset_class",
+   "fieldtype": "Data",
+   "label": "Asset Class"
+  },
+  {
+   "fieldname": "asset_location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Custom Location"
+  },
+  {
+   "fieldname": "asset_desc",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Asset Name"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "label": "Asset Barcode"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-28 11:56:48.074511",
+ "modified_by": "Administrator",
+ "module": "Stock Count",
+ "name": "Count Asset",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
